@@ -5,7 +5,21 @@ public class ReplaceAWithE {
         ein 'e' ersetzt.
     */
     public static String stringReplaceAWithE(String str) {
-        return "";
+        if(str == null || str.length() == 0) {
+            return "";
+        }
+
+        String replaced = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            if(str.charAt(i) == 'a') {
+                replaced += 'e';
+            } else {
+                replaced += str.charAt(i);
+            }
+        }
+
+        return replaced;
     }
 
     public static void main(String[] args) {
